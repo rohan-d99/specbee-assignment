@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Specbee Assignment</title>
+  </head>
+  <body>
+    <div class="container">
+      <header class="speakers-header">
+        <h2 class="speakers-header__title">
+          View our Featured Speakers for the Event
+        </h2>
+        <p class="speakers-header__description">
+          Speakers are core contributors and industry thought leaders working at
+          <span class="speakers-header__highlight">companies</span> that push
+          for innovation.
+        </p>
+      </header>
+      <!-- SPEAKER PROFILE (Hidden by default) -->
+      <section class="speaker">
+        <div class="speaker__profile">
+          <img src="/images/user1.jpg" alt="Speaker 1" class="speaker__image" />
+          <div class="speaker__info">
+            <h2 class="speaker__name"></h2>
+            <h4 class="speaker__title"></h4>
+            <p class="speaker__company"></p>
+            <div class="speaker__socials">
+              <img
+                src="/images/drupal.svg"
+                alt="Drupal"
+                class="speaker__social-icon"
+                id="speaker-drupal"
+              />
+              <img
+                src="/images/X.svg"
+                alt="Twitter"
+                class="speaker__social-icon"
+                id="speaker-twitter"
+              />
+              <img
+                src="/images/linkedIn.svg"
+                alt="LinkedIn"
+                class="speaker__social-icon"
+                id="speaker-linkedin"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="speaker__bio">
+          <p></p>
+        </div>
+        <button class="speaker__close" aria-label="Close Speaker Profile">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </section>
+      <!-- SPEAKER SLIDER -->
+      <div class="speaker-slider-container">
+        <button
+          class="speaker-slider-container__button speaker-slider-container__button--prev"
+          aria-label="Previous Speaker"
+        >
+          <i class="fa-solid fa-angle-left"></i>
+        </button>
+        <div class="speaker-slider">
+          <div class="speaker-slider__track">
+            <div class="speaker-slider__card" data-speaker-id="1">
+              <img
+                src="/images/user1.jpg"
+                alt="Speaker 1"
+                class="speaker-slider__image"
+              />
+              <h3 class="speaker-slider__name">John Smith</h3>
+              <div class="speaker-slider__details">
+                <h2 class="speaker-slider__title">Chief Executive Officer</h2>
+                <p class="speaker-slider__company">Horizon Global</p>
+              </div>
+            </div>
+            <div class="speaker-slider__card" data-speaker-id="2">
+              <img
+                src="/images/user2.jpg"
+                alt="Speaker 2"
+                class="speaker-slider__image"
+              />
+              <h3 class="speaker-slider__name">Emily Anderson</h3>
+              <div class="speaker-slider__details">
+                <h2 class="speaker-slider__title">Chief Marketing Officer</h2>
+                <p class="speaker-slider__company">Innovatech Solutions</p>
+              </div>
+            </div>
+            <div class="speaker-slider__card" data-speaker-id="3">
+              <img
+                src="/images/user3.jpg"
+                alt="Speaker 3"
+                class="speaker-slider__image"
+              />
+              <h3 class="speaker-slider__name">Michael Johnson</h3>
+              <div class="speaker-slider__details">
+                <h2 class="speaker-slider__title">Chief Technology Officer</h2>
+                <p class="speaker-slider__company">TechAdvance</p>
+              </div>
+            </div>
+            <div class="speaker-slider__card" data-speaker-id="4">
+              <img
+                src="/images/user4.jpg"
+                alt="Speaker 4"
+                class="speaker-slider__image"
+              />
+              <h3 class="speaker-slider__name">James Davis</h3>
+              <div class="speaker-slider__details">
+                <h2 class="speaker-slider__title">VP of Sales</h2>
+                <p class="speaker-slider__company">CloudShift</p>
+              </div>
+            </div>
+            <div class="speaker-slider__card" data-speaker-id="5">
+              <img
+                src="/images/user5.jpg"
+                alt="Speaker 5"
+                class="speaker-slider__image"
+              />
+              <h3 class="speaker-slider__name">William Clark</h3>
+              <div class="speaker-slider__details">
+                <h2 class="speaker-slider__title">Director of Operations</h2>
+                <p class="speaker-slider__company">Synergy Labs</p>
+              </div>
+            </div>
+            <div class="speaker-slider__card" data-speaker-id="6">
+              <img
+                src="/images/user6.jpg"
+                alt="Speaker 6"
+                class="speaker-slider__image"
+              />
+              <h3 class="speaker-slider__name">Ava Roberts</h3>
+              <div class="speaker-slider__details">
+                <h2 class="speaker-slider__title">Chief Financial Officer</h2>
+                <p class="speaker-slider__company">Brightwave</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button
+          class="speaker-slider-container__button speaker-slider-container__button--next"
+          aria-label="Next Speaker"
+        >
+          <i class="fa-solid fa-angle-right"></i>
+        </button>
+      </div>
+    </div>
+    <script src="/script.js"></script>
+  </body>
+</html>
