@@ -7,6 +7,7 @@ const nextButton = document.querySelector(
   ".speaker-slider-container__button--next"
 );
 const cards = document.querySelectorAll(".speaker-slider__card");
+const speakerOne = document.querySelector("#speaker-1");
 const speakerSection = document.querySelector(".speaker");
 const speakerImage = document.querySelector(".speaker__image");
 const speakerName = document.querySelector(".speaker__name");
@@ -26,6 +27,7 @@ let currentIndex = 0;
 const cardWidth =
   document.querySelector(".speaker-slider__card").offsetWidth + 40;
 const totalCards = document.querySelectorAll(".speaker-slider__card").length;
+console.log(speakerOne);
 
 function updateSliderPosition() {
   track.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
@@ -126,24 +128,30 @@ const speakerData = [
   },
 ];
 
-cards.forEach((card) => {
+speakerOne.addEventListener("click", () => {
+  speakerOne.style.display = "flex";
+});
+
+cards.forEach((card, index) => {
   card.addEventListener("click", () => {
-    const speakerId = card.getAttribute("data-speaker-id");
-    const speaker = speakerData.find(
-      (speaker) => speaker.id === parseInt(speakerId)
-    );
+    const speakerCard = document.querySelector(`#speaker-${index + 1}`);
+    speakerCard.style.display = "flex";
+    // const speakerId = card.getAttribute("data-speaker-id");
+    // const speaker = speakerData.find(
+    //   (speaker) => speaker.id === parseInt(speakerId)
+    // );
 
-    speakerImage.src = speaker.image;
-    speakerName.textContent = speaker.name;
-    speakerTitle.textContent = speaker.title;
-    speakerCompany.textContent = speaker.company;
-    speakerBio.textContent = speaker.bio;
+    // speakerImage.src = speaker.image;
+    // speakerName.textContent = speaker.name;
+    // speakerTitle.textContent = speaker.title;
+    // speakerCompany.textContent = speaker.company;
+    // speakerBio.textContent = speaker.bio;
 
-    Object.entries(speaker.socials).forEach(([key, value]) => {
-      if (socialIcons[key]) socialIcons[key].src = value;
-    });
+    // Object.entries(speaker.socials).forEach(([key, value]) => {
+    //   if (socialIcons[key]) socialIcons[key].src = value;
+    // });
 
-    speakerSection.style.display = "flex";
+    // speakerSection.style.display = "flex";
   });
 });
 
